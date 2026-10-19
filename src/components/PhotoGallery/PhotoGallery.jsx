@@ -3,7 +3,6 @@ import {
   Maximize2,
   X,
   Smartphone,
-  Download,
   Layers
 } from 'lucide-react';
 import './PhotoGallery.css';
@@ -29,9 +28,9 @@ export default function PhotoGallery({ photos = [] }) {
             <Layers size={18} className="icon-green" />
           </div>
           <div>
-            <h2 id="gallery-title" className="gallery-title">Recuerdos Navideños</h2>
+            <h2 id="gallery-title" className="gallery-title">Fotos Navideñas</h2>
             <p className="gallery-subtitle">
-              {photos.length} fotos optimizadas a resolución móvil
+              {photos.length} fotos
             </p>
           </div>
         </div>
@@ -88,7 +87,6 @@ export default function PhotoGallery({ photos = [] }) {
               <div className="lightbox-title-wrap">
                 <h3 className="lightbox-title">{selectedPhoto.title}</h3>
                 <span className="lightbox-sub">
-                  {selectedPhoto.subtitle || 'Optimizado para móvil'}
                 </span>
               </div>
               <button
@@ -110,23 +108,8 @@ export default function PhotoGallery({ photos = [] }) {
 
             <div className="lightbox-footer">
               <div className="lightbox-specs">
-                <Smartphone size={15} className="specs-icon" />
-                <span>Resolución móvil ligera</span>
-                {selectedPhoto.sizeFormatted && (
-                  <span className="specs-pill">{selectedPhoto.sizeFormatted}</span>
-                )}
-              </div>
 
-              <a
-                href={selectedPhoto.src}
-                download={selectedPhoto.title || 'foto-navidad-2026.jpg'}
-                className="lightbox-download-btn"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Download size={15} />
-                <span>Descargar</span>
-              </a>
+              </div>
             </div>
           </div>
         </div>

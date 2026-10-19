@@ -240,8 +240,8 @@
 .lightbox-footer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 12px 18px;
+  justify-content: center;
+  padding: 14px 18px;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
   background-color: var(--bg-surface);
 }
@@ -265,23 +265,6 @@
   border-radius: var(--radius-full);
   font-weight: 600;
   font-size: 0.75rem;
-}
-
-.lightbox-download-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 8px 14px;
-  background-color: var(--green-pine);
-  color: white;
-  border-radius: var(--radius-full);
-  font-size: 0.82rem;
-  font-weight: 500;
-  transition: background-color var(--transition-fast);
-}
-
-.lightbox-download-btn:hover {
-  background-color: var(--green-deep);
 }
 
 /* Breakpoints Responsivos */
