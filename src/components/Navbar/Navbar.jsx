@@ -73,7 +73,7 @@ export default function Navbar() {
         {/* Badge festivo solo en Desktop */}
         <div className="navbar-badge">
           <Sparkles size={14} className="badge-sparkle" />
-          <span>Edición 2026</span>
+          <span>2026</span>
         </div>
 
         {/* Botón Hamburguesa para Móvil */}
@@ -83,7 +83,7 @@ export default function Navbar() {
           aria-expanded={isOpen}
           aria-label={isOpen ? "Cerrar menú de navegación" : "Abrir menú de navegación"}
         >
-          {isOpen ? <X size={22} /> : <Menu size={22} />}
+          {isOpen ? <X size={22} /> : <span style={{ fontSize: '14px' }}><Menu size={22} />Opciones</span>}
         </button>
       </nav>
 
