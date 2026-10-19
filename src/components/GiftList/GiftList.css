@@ -125,8 +125,13 @@
 }
 
 @keyframes shimmer {
-  0% { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
 }
 
 /* Estado de lista (Vacío / Error) */
@@ -207,6 +212,7 @@
 .mobile-gift-cards {
   display: flex;
   flex-direction: column;
+  height: auto;
   gap: 10px;
 }
 
@@ -241,13 +247,13 @@
 
 .item-wish {
   display: inline-flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 6px;
   font-size: 0.86rem;
   color: var(--green-deep);
   background-color: rgba(45, 106, 79, 0.08);
-  padding: 4px 10px;
-  border-radius: var(--radius-full);
+  padding: 6px 12px;
+  border-radius: 12px;
   width: fit-content;
   max-width: 100%;
 }
@@ -259,12 +265,12 @@
 
 .wish-icon {
   flex-shrink: 0;
+  margin-top: 2px;
 }
 
 .wish-text {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  white-space: normal;
+  word-break: break-word;
 }
 
 /* Vista Desktop: Tabla sin bordes duros */
