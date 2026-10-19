@@ -1,0 +1,14 @@
+.photos-page-container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 8px 0 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.photos-content-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

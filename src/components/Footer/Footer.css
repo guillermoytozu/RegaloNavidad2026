@@ -1,0 +1,33 @@
+.footer-wrapper {
+  margin-top: auto;
+  padding: 34px 16px 28px;
+  background-color: transparent;
+  border-top: 1px solid rgba(28, 36, 32, 0.06);
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-greeting {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.footer-year {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--green-deep);
+  letter-spacing: 0.5px;
+}
+
+.footer-arrow {
+  color: var(--red-berry);
+  margin: 0 4px;
+}

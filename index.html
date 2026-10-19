@@ -1,80 +1,18 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="es">
 <head>
-    <title>RegalosNavidad2026</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <meta name="theme-color" content="#1b4332" />
+  <meta name="description" content="Regalo Secreto y Galería Navideña 2026 - 2027" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>Regalo Secreto - Navidad 2026</title>
 </head>
-
-<body> <!-- El body DEBE empezar antes de todo el contenido visual -->
-
-    <nav>
-        <ul class="lista-Nav">
-            <!-- Nota: Respeté tu L mayúscula en los IDs -->
-            <li><a id="Link-inicio" href="#">Inicio</a></li>
-            <li><a id="Link-fotos" href="#">Fotos Navideñas</a></li>
-        </ul>
-    </nav>
-    <header id="header">
-        <h1 id="Titulo">Bienvenidos</h1>
-    </header>
-
-    <!-- AGRUPAMOS LA VISTA INICIO -->
-    <main id="vista-inicio">
-
-        <form id="formulario-navidad">
-            <section>
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Nombre">
-            </section>
-            <section>
-                <label for="apellido">Apellido:</label>
-                <input type="text" id="apellido" name="apellido" placeholder="Apellido">
-            </section>
-            <section>
-                <label for="regalo">¿Qué quiero por Navidad?:</label>
-                <input type="text" id="regalo" name="regalo" placeholder="Ej. Un viaje a cancun">
-            </section>
-            <button id="boton-formulario">Enviar</button>
-        </form>
-
-        <section id="seccion-lista">
-            <h2>Lista de Deseos Actual</h2>
-            <table id="tabla-lista-regalos">
-                <thead>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Apellido</th>
-                        <th>Regalo</th>
-                    </tr>
-                </thead>
-                <tbody id="cuerpo-tabla-regalos">
-                </tbody>
-            </table>
-        </section>
-
-    </main> <!-- FIN DE VISTA INICIO -->
-
-    <!-- VISTA FOTOS (Oculta por defecto) -->
-    <main id="vista-fotos" class="oculto">
-        <section class="galeria-grid">
-            <img src="IMG/foto1.jpg" alt="Foto Navideña 1">
-            <img src="IMG/foto2.jpg" alt="Foto Navideña 2">
-            <img src="IMG/foto3.JPG" alt="Foto Navideña 3">
-            <img src="IMG/foto4.jpg" alt="Foto Navideña 3">
-
-        </section>
-    </main> <!-- FIN DE VISTA FOTOS -->
-
-    <footer>
-        <p>Felices fiestas navideñas y año nueveras 🎄🎅</p>
-        <p class="footer">2026 -> 2027</p>
-    </footer>
-
-    <script type="module" src="main.js"></script>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
 </body>
-
 </html>
-
-<!-- Test -->

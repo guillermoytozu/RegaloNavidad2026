@@ -1,0 +1,350 @@
+.gift-list-section {
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto 40px;
+  padding: 0 16px;
+}
+
+.list-card-container {
+  background-color: var(--bg-surface);
+  border-radius: var(--radius-lg);
+  padding: 22px 18px;
+  box-shadow: var(--shadow-md);
+  /* Sin bordes duros */
+}
+
+/* Barra superior */
+.list-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.list-heading-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.list-title {
+  font-size: 1.18rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+/* Botón de recarga */
+.btn-refresh {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background-color: var(--bg-surface-soft);
+  color: var(--text-secondary);
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.btn-refresh:hover:not(:disabled) {
+  background-color: var(--green-soft);
+  color: var(--green-pine);
+}
+
+.refresh-label {
+  display: none;
+}
+
+.icon-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Buscador mobile-first */
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 14px;
+  color: var(--text-tertiary);
+  pointer-events: none;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 36px 10px 38px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  color: var(--text-primary);
+  background-color: var(--bg-surface-soft);
+  border: none;
+  border-radius: var(--radius-full);
+  outline: none;
+  transition: background-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.search-input:focus {
+  background-color: var(--bg-surface);
+  box-shadow: 0 0 0 2px var(--green-accent);
+}
+
+.search-clear {
+  position: absolute;
+  right: 12px;
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  background-color: rgba(0, 0, 0, 0.06);
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Skeletons */
+.skeleton-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skeleton-card {
+  height: 68px;
+  background: linear-gradient(90deg, #f4efe7 25%, #ede6db 50%, #f4efe7 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--radius-md);
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Estado de lista (Vacío / Error) */
+.list-state-box {
+  text-align: center;
+  padding: 36px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.state-icon-muted {
+  color: var(--text-tertiary);
+}
+
+.state-message {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  max-width: 320px;
+}
+
+.empty-box {
+  padding: 44px 20px;
+}
+
+.empty-icon-wrap {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-full);
+  background-color: var(--green-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-gift-icon {
+  color: var(--green-pine);
+}
+
+.empty-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.empty-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  max-width: 380px;
+  line-height: 1.5;
+}
+
+.error-box {
+  background-color: var(--red-soft);
+  border-radius: var(--radius-md);
+}
+
+.error-icon {
+  color: var(--red-berry);
+}
+
+.btn-retry {
+  padding: 8px 16px;
+  background-color: var(--red-berry);
+  color: white;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: opacity var(--transition-fast);
+}
+
+.btn-retry:hover {
+  opacity: 0.9;
+}
+
+/* Tarjetas Móviles (Mobile First) */
+.mobile-gift-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.gift-item-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px;
+  background-color: var(--bg-surface-soft);
+  border-radius: var(--radius-md);
+  transition: transform var(--transition-fast), background-color var(--transition-fast);
+}
+
+.gift-item-card:hover {
+  background-color: #eee7dc;
+}
+
+.item-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+.item-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.item-wish {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.86rem;
+  color: var(--green-deep);
+  background-color: rgba(45, 106, 79, 0.08);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  width: fit-content;
+  max-width: 100%;
+}
+
+.gift-item-card:nth-child(even) .item-wish {
+  color: var(--red-deep);
+  background-color: var(--red-soft);
+}
+
+.wish-icon {
+  flex-shrink: 0;
+}
+
+.wish-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Vista Desktop: Tabla sin bordes duros */
+.desktop-table-container {
+  display: none;
+}
+
+.gifts-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.92rem;
+}
+
+.gifts-table th {
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.gifts-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+  color: var(--text-primary);
+}
+
+.gifts-table tbody tr {
+  transition: background-color var(--transition-fast);
+}
+
+.gifts-table tbody tr:hover {
+  background-color: var(--bg-surface-soft);
+}
+
+.gifts-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.table-gift-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  background-color: var(--green-soft);
+  color: var(--green-deep);
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+.gifts-table tbody tr:nth-child(even) .table-gift-pill {
+  background-color: var(--red-soft);
+  color: var(--red-deep);
+}
+
+.pill-gift-icon {
+  flex-shrink: 0;
+}
+
+/* Breakpoints para pantallas mayores */
+@media (min-width: 640px) {
+  .list-card-container {
+    padding: 28px 24px;
+  }
+
+  .refresh-label {
+    display: inline;
+  }
+
+  .mobile-gift-cards {
+    display: none;
+  }
+
+  .desktop-table-container {
+    display: block;
+    overflow-x: auto;
+  }
+}
